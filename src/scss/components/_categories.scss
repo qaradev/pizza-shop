@@ -1,6 +1,12 @@
-@import '../variables';
+@import "../variables";
 
 .categories {
+  @media screen and (max-width: 1280px) {
+    width: 100%;
+    overflow: scroll;
+    padding: 12px 0px;
+  } 
+
   ul {
     display: flex;
 
@@ -13,6 +19,11 @@
       cursor: pointer;
       transition: background-color 0.1s ease-in-out;
       @include noselect();
+
+      @media screen and (max-width:450px) {
+        padding: 7px 15px;
+        font-weight: 500;
+      }
 
       &:hover {
         background-color: darken(#f9f9f9, 2%);

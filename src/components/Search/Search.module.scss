@@ -1,0 +1,18 @@
+.root {
+  width: 30%;
+  position: relative;
+  input {
+    padding: 8px 15px 8px 30px;
+    border-radius: 20px;
+    border: 1px solid #00000075;
+    font-size: 16px;
+    width: 100%;
+  }
+}
+
+.searchIcon {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  opacity: 0.5;
+}
