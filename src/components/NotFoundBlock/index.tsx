@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./notfound.module.scss";
+import React from 'react';
+import styles from './notfound.module.scss';
 
-const NotFoundBlock = () => {
+const NotFoundBlock:React.FC = () => {
   return (
     <div className={styles.emptyPage}>
       <h2>😕</h2>

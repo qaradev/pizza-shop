@@ -1,8 +1,8 @@
-@import "./fonts";
-@import "./variables";
-@import "./libs/normalize";
+@import './fonts';
+@import './variables';
+@import './libs/normalize';
 
-@import "./components/all";
+@import './components/all';
 
 body {
   background-color: $background;
@@ -17,7 +17,7 @@ body {
   border-radius: 10px;
   max-width: 1400px;
 
-  @media screen and (max-width: 330px){
+  @media screen and (max-width: 330px) {
     margin: 0 auto;
     border-radius: 0;
   }
@@ -25,6 +25,36 @@ body {
 
 .content {
   padding: 40px 0;
+
+  &__error-info {
+    margin: 100px auto;
+    width: 500px;
+    text-align: center;
+
+    @media screen and (max-width: 768px) {
+      width: 90%;
+      margin: 20px auto;
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+
+    p {
+      font-size: 20px;
+
+      @media screen and (max-width: 768px) {
+        font-size: 18px;
+      }
+    }
+  }
 
   &__title {
     margin: 35px 0;
@@ -52,7 +82,7 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 850px) {
       flex-direction: column-reverse;
       align-items: flex-end;
     }
@@ -173,6 +203,28 @@ body {
       width: 13%;
 
       &-minus {
+        &:disabled {
+          opacity: 0.4;
+          border-color: #787878;
+          cursor: default;
+
+          &:active {
+            transform: none;
+          }
+
+          &:hover {
+            background-color: transparent;
+
+            svg path {
+              fill: #787878;
+            }
+          }
+
+          svg path {
+            fill: #787878;
+          }
+        }
+
         svg {
           path:first-of-type {
             display: none;
